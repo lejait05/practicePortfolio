@@ -1,0 +1,47 @@
+collections:
+  authors:
+    output: true
+
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-remote-theme # add this line to the plugins list if you already have one for architect
+
+#architect theme
+remote_theme: pages-themes/architect@v0.2.0
+title: [The title of your site]
+description: [A short description of your site's purpose]
+show_downloads: ["true" or "false" (unquoted) to indicate whether to provide a download URL]
+google_analytics: [Your Google Analytics tracking ID]
+
+
+
+lsi: false
+safe: true
+source: [main]
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
